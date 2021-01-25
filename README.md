@@ -1,4 +1,4 @@
-# Usagi 2.0's Apache backbone
+# Apache Spark + Solr + Livy backbone
 
 A Docker network of **[Apache Spark](https://spark.apache.org)**, **[Apache Solr](https://lucene.apache.org/solr/)**, and **[Apache Livy](https://livy.apache.org)**.
 
