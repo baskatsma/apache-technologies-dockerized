@@ -2,8 +2,11 @@
 
 export SPARK_MASTER_HOST=`hostname`
 
-. "${SPARK_HOME}/sbin/spark-config.sh"
+# Fix "java.lang.NoClassDefFoundError: org/slf4j/Logger"
+export SPARK_DIST_CLASSPATH=$(hadoop classpath)
 
+# Load Spark environment variables
+. "${SPARK_HOME}/sbin/spark-config.sh"
 . "${SPARK_HOME}/bin/load-spark-env.sh"
 
 echo "Starting master..."

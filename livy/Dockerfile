@@ -5,12 +5,10 @@ ARG livy_version='0.7.0-incubating'
 ENV LIVY_HOME="/usr/livy-${livy_version}"
 
 COPY start-livy.sh /start-livy.sh
-
-# Copy conf file
 COPY conf/livy.conf /tmp/livy.conf
 
 # Install Livy
-RUN wget -q https://apache.newfountain.nl/incubator/livy/${livy_version}/apache-livy-${livy_version}-bin.zip -O livy.zip && \
+RUN wget -q http://archive.apache.org/dist/incubator/livy/${livy_version}/apache-livy-${livy_version}-bin.zip -O livy.zip && \
     unzip -q livy.zip && \
     mv apache-livy-${livy_version}-bin "${LIVY_HOME}" && \
     rm livy.zip && \

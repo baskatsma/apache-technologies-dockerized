@@ -2,11 +2,10 @@ FROM openjdk:8-jre-slim
 
 ARG shared_workspace=/opt/workspace
 
-# OS & Python 3
-
 RUN mkdir -p ${shared_workspace} && \
     apt-get update -y && \
-    apt-get install -y python3 && \
+    apt-get install -y --no-install-recommends \
+    python3 && \
     ln -s /usr/bin/python3 /usr/bin/python && \
     rm -rf /var/lib/apt/lists/*
 
