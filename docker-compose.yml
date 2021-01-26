@@ -1,6 +1,6 @@
 services:
   spark-master:
-    image: spark-master:latest
+    image: spark-master:2.4.0
     container_name: spark-master
     hostname: spark-master
     ports:
@@ -14,7 +14,7 @@ services:
       - "SPARK_LOCAL_IP=spark-master"
       
   spark-worker:
-    image: spark-worker:latest
+    image: spark-worker:2.4.0
     container_name: spark-worker
     hostname: spark-worker
     depends_on:
@@ -30,7 +30,7 @@ services:
       - spark-network
       
   livy:
-    image: livy:latest
+    image: livy:0.7.0-incubating
     container_name: livy
     hostname: livy
     ports:

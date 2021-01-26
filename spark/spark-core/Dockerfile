@@ -1,4 +1,4 @@
-FROM core
+FROM core:11-jre-slim
 
 ARG scala_version='2.11.12'
 ARG spark_version='2.4.0'

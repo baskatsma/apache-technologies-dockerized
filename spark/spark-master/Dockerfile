@@ -1,4 +1,4 @@
-FROM spark-core
+FROM spark-core:2.4.0
 
 COPY start-master.sh /start-master.sh
 COPY test-pyspark.sh /test-pyspark.sh

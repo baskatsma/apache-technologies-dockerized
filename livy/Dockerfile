@@ -1,4 +1,4 @@
-FROM spark-core
+FROM spark-core:2.4.0
 
 ARG livy_version='0.7.0-incubating'
 
